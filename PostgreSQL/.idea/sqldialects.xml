@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/1_CRUD/create.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/1_CRUD/drop.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/1_CRUD/insert.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/1_CRUD/select_alias.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/1_CRUD/select_count.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/1_CRUD/select_group.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/1_CRUD/select_limit.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/2_MultiTableOperations/Except.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/2_MultiTableOperations/intersect.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/2_MultiTableOperations/join_cross.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/2_MultiTableOperations/join_inner.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/2_MultiTableOperations/join_left.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/2_MultiTableOperations/join_outer.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/2_MultiTableOperations/join_right.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/2_MultiTableOperations/join_self.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/2_MultiTableOperations/union.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/3_Subqueries/cte.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/3_Subqueries/cte_recursive.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/3_Subqueries/subquery_from.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/3_Subqueries/subquery_where.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/4_Views/create_music_store_view.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/5_Indezes/create_music_store_idx.sql" dialect="PostgreSQL" />
+    <file url="PROJECT" dialect="PostgreSQL" />
+  </component>
+</project>

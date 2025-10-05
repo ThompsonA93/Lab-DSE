@@ -1,0 +1,9 @@
+services:
+  psql:
+    container_name: practiceDB
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=rootpostgresql
+    ports:
+      - "54321:5432"  
