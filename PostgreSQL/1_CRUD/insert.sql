@@ -24,7 +24,6 @@ INSERT INTO artists (artist_name, city) VALUES
 ('John Lennon', 'Liverpool'),
 ('Nirvana', 'Aberdeen'),
 ('Bob Dylan', 'Duluth'),
--- Artists with NULL names
 (NULL, 'New York'),
 (NULL, 'Manchester'),
 (NULL, NULL),
