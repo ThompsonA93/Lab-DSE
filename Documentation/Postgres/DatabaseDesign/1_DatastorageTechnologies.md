@@ -27,8 +27,6 @@
 
 ### Comma-separated values (CSV)
 
-
-
 ```csv
 ID,Title,Genre
 1,"Dune, Part One","Science Fiction"
@@ -65,7 +63,6 @@ ID,Title,Genre
 
 ### Extensible Markup Language (XML)
 
-
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <User UserID="U0045" Status="Active">
@@ -92,9 +89,13 @@ ID,Title,Genre
 
 ## Database Management Systems (DBMS)
 
-![Logische Architectur](./image/1_LogicalArchitecture_PSQL.drawio.png)
+![Logical Architectur](./image/1_DBMSArchitecture_PSQL.drawio.png)
 
 ### Cluster
+
+![Cluster Architectur](./image/1_ClusterArchitecture_PSQL.drawio.png)
+
+
 
 ### Databases
 

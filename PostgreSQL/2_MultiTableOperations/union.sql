@@ -10,11 +10,11 @@ WHERE
     city IS NOT NULL
 UNION
 SELECT
-    country,
+    city,
     artist_name
 FROM
     artists
 WHERE
-    country IS NOT NULL
+    city IS NOT NULL
 ORDER BY
     city;

@@ -1,15 +1,17 @@
 SET search_path TO music_store;
 
-INSERT INTO artists (artist_name) VALUES
-('Taylor Swift'),
-('Kendrick Lamar'),
-('Adele'),
-('Daft Punk'),
+INSERT INTO artists(artist_name) VALUES
 ('Pink Floyd'),
-('The Beatles'),
-('AC/DC'),
-('Prince'),
-('Miles Davis');
+('Lauryn Hill'),
+('Eminem'),
+('The Smashing Pumpkins'),
+('Tool'),
+('The Pixies'),
+('The Beach Boys'),
+('The velvet Underground'),
+('Green Day'),
+('Nat King Cole'),
+('System of a Down');
 
 INSERT INTO artists (artist_name, city) VALUES
 ('Queen', 'London'),
@@ -29,8 +31,61 @@ INSERT INTO artists (artist_name, city) VALUES
 (NULL, NULL),
 (NULL, 'Rome'),
 (NULL, 'Berlin'),
-(NULL, 'Toronto');
-
+(NULL, 'Toronto'),
+('Taylor Swift', 'West Reading'),
+('Drake', 'Toronto'),
+('Billie Eilish', 'Los Angeles'),
+('Adele', 'London'),
+('Ed Sheeran', 'Halifax'),
+('Ariana Grande', 'Boca Raton'),
+('Elton John', 'Pinner'),
+('Madonna', 'Bay City'),
+('Beyoncé', 'Houston'),
+('Rihanna', 'Saint Michael'),
+('Kendrick Lamar', 'Compton'),
+('The Beatles', 'Liverpool'),
+('Elvis Presley', 'Tupelo'),
+('Mozart', 'Salzburg'),
+('Ludwig van Beethoven', 'Bonn'),
+('Frank Sinatra', 'Hoboken'),
+('David Bowie', 'London'),
+('Prince', 'Minneapolis'),
+('Miles Davis', 'Alton'),
+('Johnny Cash', 'Kingsland'),
+('Ray Charles', 'Albany'),
+('Bob Marley', 'Nine Mile'),
+('The Clash', 'London'),
+('Wu-Tang Clan', 'Staten Island'),
+('Daft Punk', 'Paris'),
+('Tupac Shakur', 'New York'),
+('The Cure', 'Crawley'),
+('Radiohead', 'Abingdon'),
+('U2', 'Dublin'),
+('AC/DC', 'Sydney'),
+('Guns N Roses', 'Los Angeles'),
+('Iron Maiden', 'London'),
+('Rush', 'Toronto'),
+('R.E.M.', 'Athens'),
+('Red Hot Chili Peppers', 'Los Angeles'),
+('Oasis', 'Manchester'),
+('Blur', 'London'),
+('The Smiths', 'Manchester'),
+('J.S. Bach', 'Eisenach'),
+('Chopin', 'Żelazowa Wola'),
+('Puccini', 'Lucca'),
+('Ella Fitzgerald', 'Newport News'),
+('Louis Armstrong', 'New Orleans'),
+('Aretha Franklin', 'Memphis'),
+('SZA', NULL),
+('Post Malone', 'Syracuse'),
+('Halsey', 'Washington'),
+(NULL, 'Seattle'),
+(NULL, 'Boston'),
+(NULL, 'Austin'),
+('Enya', 'Gweedore'),
+('Avicii', 'Stockholm'),
+('Imagine Dragons', 'Las Vegas'),
+('Coldplay', 'London');
 
 
 INSERT INTO genres (genre_name) VALUES
@@ -42,7 +97,23 @@ INSERT INTO genres (genre_name) VALUES
 ('Jazz'),
 ('Classical'),
 ('Hip Hop'),
-('Folk-Rock');
+('Folk-Rock'),
+('R&B'),
+('Electronic'),
+('Indie'),
+('Punk'),
+('Reggae'),
+('Gospel'),
+('Soul'),
+('Techno'),
+('House'),
+('Ambient'),
+('World Music'),
+('Soundtrack'),
+('New Age'),
+('Disco'),
+('Ska'),
+('Spoken Word');
 
 INSERT INTO albums (album_title, release_year, artist_id, genre_id) VALUES
 ('A Night at the Opera', 1975, (SELECT artist_id FROM artists WHERE artist_name = 'Queen'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
@@ -67,17 +138,90 @@ INSERT INTO albums (album_title, release_year, artist_id, genre_id) VALUES
 ('Nevermind', 1991, (SELECT artist_id FROM artists WHERE artist_name = 'Nirvana'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
 ('Highway 61 Revisited', 1965, (SELECT artist_id FROM artists WHERE artist_name = 'Bob Dylan'), (SELECT genre_id FROM genres WHERE genre_name = 'Folk-Rock')),
 ('Past Masters', 1988, (SELECT artist_id FROM artists WHERE artist_name = 'The Beatles'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
-(NULL, 1997, (SELECT artist_id FROM artists WHERE artist_name = 'Daft Punk'), (SELECT genre_id FROM genres WHERE genre_name = 'Pop')),
+(NULL, 1997, (SELECT artist_id FROM artists WHERE artist_name = 'Daft Punk'), (SELECT genre_id FROM genres WHERE genre_name = 'Electronic')),
 (NULL, 2020, (SELECT artist_id FROM artists WHERE artist_name = 'Taylor Swift'), (SELECT genre_id FROM genres WHERE genre_name = 'Folk-Rock')),
 (NULL, 1971, (SELECT artist_id FROM artists WHERE artist_name = 'Jimi Hendrix'), (SELECT genre_id FROM genres WHERE genre_name = 'Blues')),
 (NULL, 1969, (SELECT artist_id FROM artists WHERE artist_name = 'The Rolling Stones'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
-(NULL, 1992, (SELECT artist_id FROM artists WHERE artist_name = 'Prince'), (SELECT genre_id FROM genres WHERE genre_name = 'Pop')),
+(NULL, 1992, (SELECT artist_id FROM artists WHERE artist_name = 'Prince'), (SELECT genre_id FROM genres WHERE genre_name = 'R&B')),
 (NULL, 2022, (SELECT artist_id FROM artists WHERE artist_name = 'Adele'), (SELECT genre_id FROM genres WHERE genre_name = 'Pop')),
 ('Rumours', 1977, (SELECT artist_id FROM artists WHERE artist_name = 'Eagles'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
 ('DAMN.', 2017, (SELECT artist_id FROM artists WHERE artist_name = 'Kendrick Lamar'), (SELECT genre_id FROM genres WHERE genre_name = 'Hip Hop')),
 ('Born in the U.S.A.', 1984, (SELECT artist_id FROM artists WHERE artist_name = 'Bob Dylan'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
-('Synchronicity', 1983, (SELECT artist_id FROM artists WHERE artist_name = 'The Beatles'), (SELECT genre_id FROM genres WHERE genre_name = 'Pop'));
-
+('Synchronicity', 1983, (SELECT artist_id FROM artists WHERE artist_name = 'The Beatles'), (SELECT genre_id FROM genres WHERE genre_name = 'Pop')),
+('Sgt. Pepper''s...', 1967, (SELECT artist_id FROM artists WHERE artist_name = 'The Beatles'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Abbey Road', 1969, (SELECT artist_id FROM artists WHERE artist_name = 'The Beatles'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Let It Be', 1970, (SELECT artist_id FROM artists WHERE artist_name = 'The Beatles'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Lemonade', 2016, (SELECT artist_id FROM artists WHERE artist_name = 'Beyoncé'), (SELECT genre_id FROM genres WHERE genre_name = 'R&B')),
+('Renaissance', 2022, (SELECT artist_id FROM artists WHERE artist_name = 'Beyoncé'), (SELECT genre_id FROM genres WHERE genre_name = 'House')),
+('Thriller (40th Ed)', 2022, (SELECT artist_id FROM artists WHERE artist_name = 'Michael Jackson'), (SELECT genre_id FROM genres WHERE genre_name = 'Pop')),
+('In Utero', 1993, (SELECT artist_id FROM artists WHERE artist_name = 'Nirvana'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Nevermind (20th)', 2011, (SELECT artist_id FROM artists WHERE artist_name = 'Nirvana'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Sticky Fingers', 1971, (SELECT artist_id FROM artists WHERE artist_name = 'The Rolling Stones'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('The Rise and Fall of Ziggy Stardust...', 1972, (SELECT artist_id FROM artists WHERE artist_name = 'David Bowie'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Hunky Dory', 1971, (SELECT artist_id FROM artists WHERE artist_name = 'David Bowie'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('25', 2015, (SELECT artist_id FROM artists WHERE artist_name = 'Adele'), (SELECT genre_id FROM genres WHERE genre_name = 'Pop')),
+('÷ (Divide)', 2017, (SELECT artist_id FROM artists WHERE artist_name = 'Ed Sheeran'), (SELECT genre_id FROM genres WHERE genre_name = 'Pop')),
+('Lover', 2019, (SELECT artist_id FROM artists WHERE artist_name = 'Taylor Swift'), (SELECT genre_id FROM genres WHERE genre_name = 'Pop')),
+('Midnights', 2022, (SELECT artist_id FROM artists WHERE artist_name = 'Taylor Swift'), (SELECT genre_id FROM genres WHERE genre_name = 'Pop')),
+('Scorpion', 2018, (SELECT artist_id FROM artists WHERE artist_name = 'Drake'), (SELECT genre_id FROM genres WHERE genre_name = 'Hip Hop')),
+('Views', 2016, (SELECT artist_id FROM artists WHERE artist_name = 'Drake'), (SELECT genre_id FROM genres WHERE genre_name = 'Hip Hop')),
+('When We All Fall Asleep, Where Do We Go?', 2019, (SELECT artist_id FROM artists WHERE artist_name = 'Billie Eilish'), (SELECT genre_id FROM genres WHERE genre_name = 'Pop')),
+('Happier Than Ever', 2021, (SELECT artist_id FROM artists WHERE artist_name = 'Billie Eilish'), (SELECT genre_id FROM genres WHERE genre_name = 'Pop')),
+('The Fame', 2008, (SELECT artist_id FROM artists WHERE artist_name = 'Madonna'), (SELECT genre_id FROM genres WHERE genre_name = 'Pop')),
+('Like a Prayer', 1989, (SELECT artist_id FROM artists WHERE artist_name = 'Madonna'), (SELECT genre_id FROM genres WHERE genre_name = 'Pop')),
+('Damn The Torpedoes', 1979, (SELECT artist_id FROM artists WHERE artist_name = 'Eagles'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Jazz', 1978, (SELECT artist_id FROM artists WHERE artist_name = 'Queen'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Innuendo', 1991, (SELECT artist_id FROM artists WHERE artist_name = 'Queen'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Ride The Lightning', 1984, (SELECT artist_id FROM artists WHERE artist_name = 'Metallica'), (SELECT genre_id FROM genres WHERE genre_name = 'Metal')),
+('Appetite for Destruction', 1987, (SELECT artist_id FROM artists WHERE artist_name = 'Guns N Roses'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Chinese Democracy', 2008, (SELECT artist_id FROM artists WHERE artist_name = 'Guns N Roses'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('The Joshua Tree', 1987, (SELECT artist_id FROM artists WHERE artist_name = 'U2'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Achtung Baby', 1991, (SELECT artist_id FROM artists WHERE artist_name = 'U2'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('The Chronic', 1992, (SELECT artist_id FROM artists WHERE artist_name = 'Kendrick Lamar'), (SELECT genre_id FROM genres WHERE genre_name = 'Hip Hop')),
+('Blue Train', 1957, (SELECT artist_id FROM artists WHERE artist_name = 'Miles Davis'), (SELECT genre_id FROM genres WHERE genre_name = 'Jazz')),
+('Led Zeppelin II', 1969, (SELECT artist_id FROM artists WHERE artist_name = 'Led Zeppelin'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Led Zeppelin III', 1970, (SELECT artist_id FROM artists WHERE artist_name = 'Led Zeppelin'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Houses of the Holy', 1973, (SELECT artist_id FROM artists WHERE artist_name = 'Led Zeppelin'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Physical Graffiti', 1975, (SELECT artist_id FROM artists WHERE artist_name = 'Led Zeppelin'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Moving Pictures', 1981, (SELECT artist_id FROM artists WHERE artist_name = 'Rush'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('2112', 1976, (SELECT artist_id FROM artists WHERE artist_name = 'Rush'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Countdown to Extinction', 1992, (SELECT artist_id FROM artists WHERE artist_name = 'Metallica'), (SELECT genre_id FROM genres WHERE genre_name = 'Metal')),
+('The Number of the Beast', 1982, (SELECT artist_id FROM artists WHERE artist_name = 'Iron Maiden'), (SELECT genre_id FROM genres WHERE genre_name = 'Metal')),
+('Fear of the Dark', 1992, (SELECT artist_id FROM artists WHERE artist_name = 'Iron Maiden'), (SELECT genre_id FROM genres WHERE genre_name = 'Metal')),
+('Out of Time', 1991, (SELECT artist_id FROM artists WHERE artist_name = 'R.E.M.'), (SELECT genre_id FROM genres WHERE genre_name = 'Folk-Rock')),
+('Automatic for the People', 1992, (SELECT artist_id FROM artists WHERE artist_name = 'R.E.M.'), (SELECT genre_id FROM genres WHERE genre_name = 'Folk-Rock')),
+('Blood Sugar Sex Magik', 1991, (SELECT artist_id FROM artists WHERE artist_name = 'Red Hot Chili Peppers'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Californication', 1999, (SELECT artist_id FROM artists WHERE artist_name = 'Red Hot Chili Peppers'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Definitely Maybe', 1994, (SELECT artist_id FROM artists WHERE artist_name = 'Oasis'), (SELECT genre_id FROM genres WHERE genre_name = 'Indie')),
+('(What''s the Story) Morning Glory?', 1995, (SELECT artist_id FROM artists WHERE artist_name = 'Oasis'), (SELECT genre_id FROM genres WHERE genre_name = 'Indie')),
+('Parklife', 1994, (SELECT artist_id FROM artists WHERE artist_name = 'Blur'), (SELECT genre_id FROM genres WHERE genre_name = 'Indie')),
+('The Queen Is Dead', 1986, (SELECT artist_id FROM artists WHERE artist_name = 'The Smiths'), (SELECT genre_id FROM genres WHERE genre_name = 'Indie')),
+('Violin Concerto in D Major', 1844, (SELECT artist_id FROM artists WHERE artist_name = 'Vivaldi'), (SELECT genre_id FROM genres WHERE genre_name = 'Classical')),
+('Goldberg Variations', 1741, (SELECT artist_id FROM artists WHERE artist_name = 'J.S. Bach'), (SELECT genre_id FROM genres WHERE genre_name = 'Classical')),
+('Nocturnes', 1846, (SELECT artist_id FROM artists WHERE artist_name = 'Chopin'), (SELECT genre_id FROM genres WHERE genre_name = 'Classical')),
+('La bohème', 1896, (SELECT artist_id FROM artists WHERE artist_name = 'Puccini'), (SELECT genre_id FROM genres WHERE genre_name = 'Classical')),
+('Ella and Louis', 1956, (SELECT artist_id FROM artists WHERE artist_name = 'Ella Fitzgerald'), (SELECT genre_id FROM genres WHERE genre_name = 'Jazz')),
+('The Genius Sings the Blues', 1961, (SELECT artist_id FROM artists WHERE artist_name = 'Ray Charles'), (SELECT genre_id FROM genres WHERE genre_name = 'Blues')),
+('I Never Loved a Man the Way I Love You', 1967, (SELECT artist_id FROM artists WHERE artist_name = 'Aretha Franklin'), (SELECT genre_id FROM genres WHERE genre_name = 'Soul')),
+('Lana Del Rey', 2012, (SELECT artist_id FROM artists WHERE artist_name = 'SZA'), (SELECT genre_id FROM genres WHERE genre_name = 'Pop')),
+('Stoney', 2016, (SELECT artist_id FROM artists WHERE artist_name = 'Post Malone'), (SELECT genre_id FROM genres WHERE genre_name = 'Pop')),
+('Manic', 2020, (SELECT artist_id FROM artists WHERE artist_name = 'Halsey'), (SELECT genre_id FROM genres WHERE genre_name = 'Pop')),
+('Watermark', 1988, (SELECT artist_id FROM artists WHERE artist_name = 'Enya'), (SELECT genre_id FROM genres WHERE genre_name = 'New Age')),
+('Shepherd Moons', 1991, (SELECT artist_id FROM artists WHERE artist_name = 'Enya'), (SELECT genre_id FROM genres WHERE genre_name = 'New Age')),
+('True', 2013, (SELECT artist_id FROM artists WHERE artist_name = 'Avicii'), (SELECT genre_id FROM genres WHERE genre_name = 'Electronic')),
+('Evolve', 2017, (SELECT artist_id FROM artists WHERE artist_name = 'Imagine Dragons'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Parachutes', 2000, (SELECT artist_id FROM artists WHERE artist_name = 'Coldplay'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('A Rush of Blood to the Head', 2002, (SELECT artist_id FROM artists WHERE artist_name = 'Coldplay'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Unforgettable', 1991, (SELECT artist_id FROM artists WHERE artist_name = 'Nat King Cole'), (SELECT genre_id FROM genres WHERE genre_name = 'Jazz')),
+('Blue Christmas', 1957, (SELECT artist_id FROM artists WHERE artist_name = 'Elvis Presley'), (SELECT genre_id FROM genres WHERE genre_name = 'Gospel')),
+(NULL, 1994, (SELECT artist_id FROM artists WHERE artist_name = 'Wu-Tang Clan'), (SELECT genre_id FROM genres WHERE genre_name = 'Hip Hop')),
+('Enter the Wu-Tang (36 Chambers)', 1993, (SELECT artist_id FROM artists WHERE artist_name = 'Wu-Tang Clan'), (SELECT genre_id FROM genres WHERE genre_name = 'Hip Hop')),
+('Legend', 1984, (SELECT artist_id FROM artists WHERE artist_name = 'Bob Marley'), (SELECT genre_id FROM genres WHERE genre_name = 'Reggae')),
+('Catch a Fire', 1973, (SELECT artist_id FROM artists WHERE artist_name = 'Bob Marley'), (SELECT genre_id FROM genres WHERE genre_name = 'Reggae')),
+('The Black Parade', 2006, (SELECT artist_id FROM artists WHERE artist_name = 'Queen'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Appetite for Destruction', 1987, (SELECT artist_id FROM artists WHERE artist_name = 'Led Zeppelin'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('The Wall', 1979, (SELECT artist_id FROM artists WHERE artist_name = 'Pink Floyd'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock'))
+;
 
 INSERT INTO tracks (track_title, duration_seconds, album_id) VALUES
 ('Bohemian Rhapsody', 354, (SELECT album_id FROM albums WHERE album_title = 'A Night at the Opera')),
@@ -157,3 +301,125 @@ INSERT INTO company_branches (branch_name, city, established_date, parent_branch
 ('Osaka Retail Store F', 'Osaka', '2023-07-20', (SELECT branch_id FROM company_branches WHERE branch_name = 'Osaka Office')),
 ('Vancouver Retail Store G', 'Vancouver', '2023-10-25', (SELECT branch_id FROM company_branches WHERE branch_name = 'Vancouver Office')),
 ('Abuja Retail Store H', 'Abuja', '2024-01-30', (SELECT branch_id FROM company_branches WHERE branch_name = 'Abuja Office'));
+
+
+-- Additional population of Tables for the indexing strategies in 5_indexes
+WITH existing_albums AS (
+    SELECT
+        album_id,
+        COALESCE(album_title, 'Untitled Album') AS safe_album_title -- TODO :: Technical Fix: Replaces NULL album_title
+    FROM
+        albums
+    WHERE
+        album_id IS NOT NULL
+),
+track_count AS (
+    SELECT
+        a.album_id,
+        a.safe_album_title,
+        FLOOR(RANDOM() * 11 + 5)::INT AS num_tracks
+    FROM existing_albums a
+),
+generated_tracks AS (
+    SELECT
+        tc.album_id,
+        'Track ' || s.i || ' (' || tc.safe_album_title || ')' AS track_title,
+        FLOOR(RANDOM() * 481 + 120)::INT AS duration_seconds
+    FROM
+        track_count tc
+    CROSS JOIN LATERAL
+        generate_series(1, tc.num_tracks) AS s(i)
+)
+INSERT INTO tracks (track_title, duration_seconds, album_id)
+SELECT
+    track_title,
+    duration_seconds,
+    album_id
+FROM
+    generated_tracks;
+
+
+-- Table population for use in regards to 5_Indezes
+WITH id_ranges AS (
+    SELECT
+        MIN(a.album_id) AS min_a,
+        MAX(a.album_id) AS max_a,
+        MIN(r.artist_id) AS min_r,
+        MAX(r.artist_id) AS max_r
+    FROM
+        albums a
+    CROSS JOIN
+        artists r
+)
+INSERT INTO purchases (album_id, artist_id, amount)
+SELECT
+    FLOOR(RANDOM() * (r.max_a - r.min_a + 1) + r.min_a)::INT,
+    FLOOR(RANDOM() * (r.max_r - r.min_r + 1) + r.min_r)::INT,
+    (RANDOM() * 15.00 + 5.00)::NUMERIC(10, 2)
+FROM
+    generate_series(1, 1000000) AS s(i)
+CROSS JOIN
+    id_ranges r;
+
+
+
+
+WITH artist_range AS (
+    SELECT
+        MIN(artist_id) AS min_r,
+        MAX(artist_id) AS max_r
+    FROM
+        artists
+)
+INSERT INTO concerts (artist_id, venue_name, schedule)
+SELECT
+    FLOOR(RANDOM() * (r.max_r - r.min_r + 1) + r.min_r)::INT,
+    'Venue_' || (s.i % 50 + 1),
+    tsrange(
+        random_start.start_time,
+        random_start.start_time + ('1 hour'::interval * RANDOM() + '1 hour'::interval)
+    )
+FROM
+    generate_series(1, 10000) AS s(i)
+CROSS JOIN
+    artist_range r
+CROSS JOIN LATERAL (
+    SELECT '2025-01-01'::timestamp + (s.i * '1 day'::interval * RANDOM()) AS start_time
+) AS random_start;
+
+
+
+
+
+WITH valid_artists AS (
+    SELECT artist_id
+    FROM artists
+    WHERE artist_name IS NOT NULL
+),
+random_collaborations AS (
+    SELECT
+        FLOOR(RANDOM() * 1000) + 1 AS collaboration_group_id,
+        va.artist_id
+    FROM
+        valid_artists va
+    CROSS JOIN
+        generate_series(1, 10000) AS s(i)
+    WHERE RANDOM() < 0.2
+),
+grouped_collaborations AS (
+    SELECT
+        collaboration_group_id,
+        ARRAY_AGG(DISTINCT artist_id) AS collaborator_ids,
+        COUNT(DISTINCT artist_id) AS artist_count
+    FROM
+        random_collaborations
+    GROUP BY
+        collaboration_group_id
+    HAVING COUNT(DISTINCT artist_id) >= 2
+)
+INSERT INTO collaborations (album_id, collaborator_ids)
+SELECT
+    (SELECT album_id FROM albums ORDER BY RANDOM() LIMIT 1),
+    gc.collaborator_ids
+FROM
+    grouped_collaborations gc;

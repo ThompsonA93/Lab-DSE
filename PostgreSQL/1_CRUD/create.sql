@@ -53,3 +53,23 @@ CREATE TABLE company_branches (
 
     FOREIGN KEY (parent_branch_id) REFERENCES company_branches (branch_id)
 );
+
+CREATE TABLE purchases (
+    purchase_id SERIAL PRIMARY KEY,
+    album_id INT NOT NULL REFERENCES albums(album_id),
+    artist_id INT NOT NULL REFERENCES artists(artist_id),
+    amount NUMERIC(10, 2)
+);
+
+CREATE TABLE concerts (
+    concert_id SERIAL PRIMARY KEY,
+    artist_id INT NOT NULL REFERENCES artists(artist_id),
+    venue_name VARCHAR(255),
+    schedule tsrange
+);
+
+CREATE TABLE collaborations (
+    collaboration_id SERIAL PRIMARY KEY,
+    album_id INT NOT NULL REFERENCES albums(album_id),
+    collaborator_ids INT[] NOT NULL
+);
