@@ -10,9 +10,12 @@
     - [Textformat (TXT)](#textformat-txt)
     - [Markdown (MD)](#markdown-md)
   - [Database Management Systems (DBMS)](#database-management-systems-dbms)
+    - [Cluster](#cluster)
     - [Databases](#databases)
     - [Schemas](#schemas)
     - [Tables](#tables)
+    - [Indexes](#indexes)
+    - [Triggers](#triggers)
   - [Properties](#properties)
     - [Relational model](#relational-model)
     - [Atomicity, Consistency, Isolation, Durability (ACID)](#atomicity-consistency-isolation-durability-acid)
@@ -25,11 +28,61 @@
 ### Comma-separated values (CSV)
 
 
+
+```csv
+ID,Title,Genre
+1,"Dune, Part One","Science Fiction"
+2,"A Brief History of Time","Non-Fiction"
+3,"The Name of the Wind","Fantasy"
+```
+
 ## Semi-Structured Data
 
 ### Javascript Object Notation (JSON)
 
+```json
+{
+  "LibraryName": "City Central",
+  "Branches": [
+    {
+      "BranchID": "A",
+      "Location": "Northside",
+      "Collection": [
+        {"ISBN": "1234", "Title": "Dune"},
+        {"ISBN": "5678", "Title": "Foundation"}
+      ]
+    },
+    {
+      "BranchID": "B",
+      "Location": "Southside",
+      "Collection": [
+        {"ISBN": "9101", "Title": "The Martian"}
+      ]
+    }
+  ]
+}
+```
+
 ### Extensible Markup Language (XML)
+
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<User UserID="U0045" Status="Active">
+    <Name>Jane Doe</Name>
+    <DateJoined>2023-01-15</DateJoined>
+    <ContactDetails>
+        <Email>jane.doe@work.com</Email>
+        <Phone>555-1234</Phone>
+        <EmergencyContact>
+            <Name>John Doe</Name>
+            <Phone>555-9876</Phone>
+        </EmergencyContact>
+    </ContactDetails>
+</User>
+```
+
+
 
 ## Unstructured Data
 
@@ -39,11 +92,19 @@
 
 ## Database Management Systems (DBMS)
 
+![Logische Architectur](./image/1_LogicalArchitecture_PSQL.drawio.png)
+
+### Cluster
+
 ### Databases
 
 ### Schemas
 
 ### Tables 
+
+### Indexes
+
+### Triggers
 
 ## Properties
 
