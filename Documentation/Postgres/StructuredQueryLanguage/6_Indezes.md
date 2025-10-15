@@ -16,8 +16,6 @@
     - [Using `EXPLAIN`](#using-explain)
     - [Trade-Offs: Speed and Cost](#trade-offs-speed-and-cost)
 
-
-
 ## Index Types in PostgreSQL
 
 ### B-Tree Index
@@ -37,6 +35,8 @@
 ### Partial Indexes
 
 ### Viewing and Dropping Indexes
+
+
 
 
 ## Index Optimization

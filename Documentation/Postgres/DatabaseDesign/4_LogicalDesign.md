@@ -17,6 +17,7 @@
   - [Navigation Schema](#navigation-schema)
     - [Defining Access Paths](#defining-access-paths)
     - [Data Flow and Retrieval](#data-flow-and-retrieval)
+  - [Data Quality](#data-quality)
 
 
 
@@ -79,4 +80,12 @@
 
 
 
+## Data Quality
+
+- Accuracy
+- Completeness
+- Consistency
+- Up-to-date
+- Valid
+- Unique
 

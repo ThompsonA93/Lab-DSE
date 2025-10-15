@@ -116,12 +116,10 @@ INSERT INTO genres (genre_name) VALUES
 ('Spoken Word');
 
 INSERT INTO albums (album_title, release_year, artist_id, genre_id) VALUES
-('A Night at the Opera', 1975, (SELECT artist_id FROM artists WHERE artist_name = 'Queen'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
 ('Led Zeppelin IV', 1971, (SELECT artist_id FROM artists WHERE artist_name = 'Led Zeppelin'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
 ('21', 2011, (SELECT artist_id FROM artists WHERE artist_name = 'Adele'), (SELECT genre_id FROM genres WHERE genre_name = 'Pop')),
 ('Master of Puppets', 1986, (SELECT artist_id FROM artists WHERE artist_name = 'Metallica'), (SELECT genre_id FROM genres WHERE genre_name = 'Metal')),
 ('Fearless', 2008, (SELECT artist_id FROM artists WHERE artist_name = 'Taylor Swift'), (SELECT genre_id FROM genres WHERE genre_name = 'Country')),
-('News of the World', 1977, (SELECT artist_id FROM artists WHERE artist_name = 'Queen'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
 ('Black Album', 1991, (SELECT artist_id FROM artists WHERE artist_name = 'Metallica'), (SELECT genre_id FROM genres WHERE genre_name = 'Metal')),
 ('Sgt. Pepper''s Lonely Hearts Club Band', 1967, (SELECT artist_id FROM artists WHERE artist_name = 'The Beatles'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
 ('The Dark Side of the Moon', 1973, (SELECT artist_id FROM artists WHERE artist_name = 'Pink Floyd'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
@@ -170,8 +168,6 @@ INSERT INTO albums (album_title, release_year, artist_id, genre_id) VALUES
 ('The Fame', 2008, (SELECT artist_id FROM artists WHERE artist_name = 'Madonna'), (SELECT genre_id FROM genres WHERE genre_name = 'Pop')),
 ('Like a Prayer', 1989, (SELECT artist_id FROM artists WHERE artist_name = 'Madonna'), (SELECT genre_id FROM genres WHERE genre_name = 'Pop')),
 ('Damn The Torpedoes', 1979, (SELECT artist_id FROM artists WHERE artist_name = 'Eagles'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
-('Jazz', 1978, (SELECT artist_id FROM artists WHERE artist_name = 'Queen'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
-('Innuendo', 1991, (SELECT artist_id FROM artists WHERE artist_name = 'Queen'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
 ('Ride The Lightning', 1984, (SELECT artist_id FROM artists WHERE artist_name = 'Metallica'), (SELECT genre_id FROM genres WHERE genre_name = 'Metal')),
 ('Appetite for Destruction', 1987, (SELECT artist_id FROM artists WHERE artist_name = 'Guns N Roses'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
 ('Chinese Democracy', 2008, (SELECT artist_id FROM artists WHERE artist_name = 'Guns N Roses'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
@@ -218,9 +214,18 @@ INSERT INTO albums (album_title, release_year, artist_id, genre_id) VALUES
 ('Enter the Wu-Tang (36 Chambers)', 1993, (SELECT artist_id FROM artists WHERE artist_name = 'Wu-Tang Clan'), (SELECT genre_id FROM genres WHERE genre_name = 'Hip Hop')),
 ('Legend', 1984, (SELECT artist_id FROM artists WHERE artist_name = 'Bob Marley'), (SELECT genre_id FROM genres WHERE genre_name = 'Reggae')),
 ('Catch a Fire', 1973, (SELECT artist_id FROM artists WHERE artist_name = 'Bob Marley'), (SELECT genre_id FROM genres WHERE genre_name = 'Reggae')),
-('The Black Parade', 2006, (SELECT artist_id FROM artists WHERE artist_name = 'Queen'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
 ('Appetite for Destruction', 1987, (SELECT artist_id FROM artists WHERE artist_name = 'Led Zeppelin'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
-('The Wall', 1979, (SELECT artist_id FROM artists WHERE artist_name = 'Pink Floyd'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock'))
+('The Wall', 1979, (SELECT artist_id FROM artists WHERE artist_name = 'Pink Floyd'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('News of the World', 1977, (SELECT artist_id FROM artists WHERE artist_name = 'Queen'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Queen I', 1973, (SELECT artist_id FROM artists WHERE artist_name = 'Queen'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Sheer Heart Attack', 1974, (SELECT artist_id FROM artists WHERE artist_name = 'Queen'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('A Night at the Opera', 1975, (SELECT artist_id FROM artists WHERE artist_name = 'Queen'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('A Day at the Races', 1976, (SELECT artist_id FROM artists WHERE artist_name = 'Queen'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('The Game', 1980, (SELECT artist_id FROM artists WHERE artist_name = 'Queen'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Flash Gordon', 1980, (SELECT artist_id FROM artists WHERE artist_name = 'Queen'), (SELECT genre_id FROM genres WHERE genre_name = 'Soundtrack')),
+('Jazz', 1978, (SELECT artist_id FROM artists WHERE artist_name = 'Queen'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('Innuendo', 1991, (SELECT artist_id FROM artists WHERE artist_name = 'Queen'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock')),
+('The Black Parade', 2006, (SELECT artist_id FROM artists WHERE artist_name = 'Queen'), (SELECT genre_id FROM genres WHERE genre_name = 'Rock'))
 ;
 
 INSERT INTO tracks (track_title, duration_seconds, album_id) VALUES

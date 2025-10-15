@@ -10,5 +10,8 @@ DROP TABLE IF EXISTS
     company_branches,
     purchases,
     concerts,
-    collaborations
+    collaborations,
+    album_metadata,
+    artist_members,
+    supplier_catalog
     CASCADE;

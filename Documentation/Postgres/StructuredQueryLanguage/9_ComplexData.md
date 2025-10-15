@@ -24,7 +24,6 @@
     - [Time Series Functions](#time-series-functions)
     - [Data Retention and Policies](#data-retention-and-policies)
 
-
 ## Special Data Types
 
 ### Range Types
@@ -53,7 +52,6 @@
 
 
 ## XML Data Types
-
 
 ### XML Elements and Pathing
 

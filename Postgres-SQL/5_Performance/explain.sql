@@ -1,6 +1,54 @@
 SET search_path TO music_store;
 
--- EXPLAIN ANALYZE returns information about how exactly a query is being executed.
+-- EXPLAIN is used to fetch information about the given query. It allows multiple parameters
+--      Analyze: Runs the depicted query instead of tracking information
+--      Verbose: Includes any related information
+--      Format: Changes the output format, such as JSON, XML, YAML
+--      ...
+
+-- ANALYZE is not to be confused with EXPLAIN ANALYZE
+
+EXPLAIN
+SELECT
+    a.album_title,
+    g.genre_name,
+    COUNT(p.purchase_id) AS total_purchases
+FROM
+    albums a
+JOIN
+    genres g ON a.genre_id = g.genre_id
+JOIN
+    purchases p ON a.album_id = p.album_id
+WHERE
+    g.genre_name = 'Rock' -- Complex filtering on a joined table
+GROUP BY
+    a.album_title, g.genre_name
+ORDER BY
+    total_purchases DESC
+LIMIT 10;
+
+EXPLAIN (ANALYZE, VERBOSE, FORMAT JSON)
+SELECT
+    a.album_title,
+    g.genre_name,
+    COUNT(p.purchase_id) AS total_purchases
+FROM
+    albums a
+JOIN
+    genres g ON a.genre_id = g.genre_id
+JOIN
+    purchases p ON a.album_id = p.album_id
+WHERE
+    g.genre_name = 'Rock' -- Complex filtering on a joined table
+GROUP BY
+    a.album_title, g.genre_name
+ORDER BY
+    total_purchases DESC
+LIMIT 10;
+
+
+
+
 
 EXPLAIN ANALYZE
 SELECT SUM(p.amount)
@@ -10,7 +58,6 @@ WHERE p.artist_id = (
     FROM artists
     WHERE artist_name = 'Queen'
 );
-
 /* Returned information may look like this -- Data may differ
 Finalize Aggregate  (cost=12628.51..12628.52 rows=1 width=32) (actual time=41.537..47.181 rows=1.00 loops=1)
   Buffers: shared hit=6371

@@ -14,7 +14,6 @@
     - [Reporting Performance](#reporting-performance)
 
 
-
 ## Virtual Tables
 
 ### `CREATE VIEW`

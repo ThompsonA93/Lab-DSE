@@ -4,7 +4,7 @@ SET search_path TO music_store;
 
 CREATE TABLE artists (
     artist_id SERIAL PRIMARY KEY,
-    artist_name VARCHAR(100),
+    artist_name VARCHAR(100) UNIQUE,
     city VARCHAR(50)
 );
 
@@ -72,4 +72,11 @@ CREATE TABLE collaborations (
     collaboration_id SERIAL PRIMARY KEY,
     album_id INT NOT NULL REFERENCES albums(album_id),
     collaborator_ids INT[] NOT NULL
+);
+
+CREATE TABLE publishers (
+    publisher_id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    country VARCHAR(50),
+    established_year INTEGER
 );

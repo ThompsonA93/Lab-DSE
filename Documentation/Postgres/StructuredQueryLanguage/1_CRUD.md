@@ -17,12 +17,12 @@
     - [Update](#update)
     - [Delete](#delete)
   - [Basic Functions and Aggregations](#basic-functions-and-aggregations)
-    - [Group By](#group-by)
-    - [Having](#having)
     - [Count](#count)
     - [Sum](#sum)
     - [Avg](#avg)
     - [Max/Min](#maxmin)
+    - [Group By](#group-by)
+    - [Having](#having)
 
 
 ## Data scaffolding

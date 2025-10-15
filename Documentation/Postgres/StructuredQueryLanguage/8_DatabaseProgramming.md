@@ -1,13 +1,17 @@
-# Database Programming (PL/pgSQL)
+# Database Programming (SQL, PL/pgSQL)
 
-- [Database Programming (PL/pgSQL)](#database-programming-plpgsql)
-  - [Procedural Languages vs SQL](#procedural-languages-vs-sql)
-    - [Block Structures](#block-structures)
-    - [Declaring Variables](#declaring-variables)
+- [Database Programming (SQL, PL/pgSQL)](#database-programming-sql-plpgsql)
+  - [Procedural and Declarative Languages](#procedural-and-declarative-languages)
+    - [Structured Query Language (SQL)](#structured-query-language-sql)
+    - [Procedural Language/PostgreSQL (PL/pgSQL)](#procedural-languagepostgresql-plpgsql)
   - [Stored Functions and Procedures](#stored-functions-and-procedures)
-    - [Functions](#functions)
-    - [Procedures](#procedures)
+    - [`FUNCTION`](#function)
+    - [`PROCEDURE`](#procedure)
     - [Creating and Executing](#creating-and-executing)
+  - [Data Interaction and Dynamic SQL](#data-interaction-and-dynamic-sql)
+    - [`SELECT INTO`](#select-into)
+    - [`PERFORM`](#perform)
+    - [`EXECUTE`](#execute)
   - [Flow Control and Logic](#flow-control-and-logic)
     - [Conditional Logic using `IF/ELSIF/ELSE/CASE`](#conditional-logic-using-ifelsifelsecase)
     - [Loops using `FOR/WHILE/LOOP`](#loops-using-forwhileloop)
@@ -22,22 +26,38 @@
     - [`READ COMMITTED` (RC)](#read-committed-rc)
     - [`REPEATABLE READ` (RR)](#repeatable-read-rr)
     - [`SERIALIZABLE` (S)](#serializable-s)
+  - [Security](#security)
+    - [SQL Injection](#sql-injection)
+  - [Concurrency Problems](#concurrency-problems)
+    - [Dirty Read](#dirty-read)
+    - [Non-Repeatable](#non-repeatable)
+    - [Phantom Reads](#phantom-reads)
 
 
-## Procedural Languages vs SQL
+## Procedural and Declarative Languages 
 
-### Block Structures
+### Structured Query Language (SQL)
 
-### Declaring Variables
+### Procedural Language/PostgreSQL (PL/pgSQL)
 
 
 ## Stored Functions and Procedures
 
-### Functions 
+### `FUNCTION` 
 
-### Procedures
+### `PROCEDURE`
 
 ### Creating and Executing
+
+
+## Data Interaction and Dynamic SQL
+
+### `SELECT INTO`
+
+### `PERFORM`
+
+### `EXECUTE`
+
 
 ## Flow Control and Logic 
 
@@ -46,6 +66,9 @@
 ### Loops using `FOR/WHILE/LOOP`
 
 ### Error Handling using `EXCEPTION`
+
+
+
 
 ## Triggers
 
@@ -56,10 +79,11 @@
 ### Creating Trigger Functions
 
 
+
+
 ## Transactions and Isolation Levels
 
 ### `BEGIN`, `COMMIT`, and `ROLLBACK`
-
 
 ### `READ UNCOMMITED` (RU)
 
@@ -68,3 +92,21 @@
 ### `REPEATABLE READ` (RR)
 
 ### `SERIALIZABLE` (S)
+
+
+## Security
+
+### SQL Injection
+
+
+
+
+
+## Concurrency Problems
+
+### Dirty Read
+
+### Non-Repeatable
+
+### Phantom Reads
+
