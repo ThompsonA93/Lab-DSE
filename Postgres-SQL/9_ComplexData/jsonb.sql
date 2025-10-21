@@ -1,10 +1,5 @@
 SET search_path TO music_store;
 
-CREATE TABLE album_metadata (
-    album_metadata_id SERIAL PRIMARY KEY,
-    album_id INT NOT NULL UNIQUE REFERENCES albums(album_id),
-    details JSONB NOT NULL
-);
 
 INSERT INTO album_metadata (album_id, details)
 VALUES (

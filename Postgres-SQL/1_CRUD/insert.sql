@@ -428,3 +428,17 @@ SELECT
     gc.collaborator_ids
 FROM
     grouped_collaborations gc;
+
+
+
+INSERT INTO publishers (name, country, established_year)
+SELECT
+    'Publisher ' || g,
+    CASE floor(random() * 3)
+        WHEN 0 THEN 'USA'
+        WHEN 1 THEN 'EU'
+        ELSE 'CH'
+    END,
+    (random() * 50 + 1950)::int
+FROM generate_series(1, 250000) g;
+

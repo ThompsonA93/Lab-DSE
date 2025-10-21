@@ -25,6 +25,7 @@ EXCEPTION
 END;
 $$;
 
+-- Call the procedure with actual values
 CALL record_purchase(
     1,
      1,

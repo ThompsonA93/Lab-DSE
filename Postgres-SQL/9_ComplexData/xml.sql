@@ -1,12 +1,5 @@
 SET search_path TO music_store;
 
-CREATE TABLE supplier_catalog (
-    catalog_id SERIAL PRIMARY KEY,
-    supplier_name VARCHAR(100),
-    catalog_date DATE,
-    product_xml XML NOT NULL
-);
-
 INSERT INTO supplier_catalog (supplier_name, catalog_date, product_xml)
 VALUES (
     'Vinyl Supply Co.',

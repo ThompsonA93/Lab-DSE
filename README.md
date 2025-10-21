@@ -2,9 +2,23 @@
 
 How to use this repository.
 
-- `/Documentation` contains Markdown to concepts. Read through and try out the contained scripts.
-- `/Postgres` contains scripts related to the **Structured Query Language (SQL)**
-- `/Cassandra` contains scripts related to the **Cassandra Query Language (CQL)**
-- `/JanusGraph` contains scripts related to **Gremlin (GSQL)**, historically called Groovy.
-- `/Ozone` contains instructions how to set up and use the **S3 storage**.
-- `/Spark` contains instructions and scripts related to the Spark Engine.
+- `Documentation` contains Markdown over the given theory.
+- `Postgres-SQL` contains SQL to use within a Postgres-Environment. Includes a `docker-compose.yaml`, for spinning up a DB service.
+
+
+## Documentation
+
+Serves as guideline to learn about topics in database technologies, from beginner to advanced.
+
+### Documentation/Postgres
+
+1. **DatabaseDesign**\
+Fundamentals of Database Management Systems. Serves as starting point.
+2. **StructuredQueryLanguage**\
+Fundamentals of SQL. Recommended after finishing [Logical Design Documentation](Documentation/Postgres/1_DatabaseDesign/4_LogicalDesign.md).
+3. **DatabaseAdministration**\
+Fundamentals of Database Administration with PSQL and Data handling. Recommended after finishing [SQL Indexes Documentation](Documentation/Postgres/2_StructuredQueryLanguage/6_Indezes.md)
+4. **DataEngineering**\
+Intermediate concepts of data management. Recommended after finishing [Database Security Documentation](Documentation/Postgres/3_DatabaseAdministration/3_Security.md)
+5. **DistributedDBMS**\
+Advanced topics on data system architectures. Recommended after finishing [Data Pipelines Documentation](Documentation/Postgres/4_DataEngineering/5_DataPipelines.md)

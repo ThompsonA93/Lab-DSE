@@ -1,25 +1,5 @@
 SET search_path TO music_store;
 
-CREATE TYPE member_role AS ENUM (
-    'Lead Vocalist',
-    'Instrumentalist',
-    'Songwriter',
-    'Producer',
-    'Manager'
-);
-
-CREATE TABLE artist_members (
-    member_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    artist_id INTEGER NOT NULL REFERENCES artists(artist_id),
-    member_name VARCHAR(100) NOT NULL,
-    member_role member_role NOT NULL,
-    tenure_dates DATERANGE,
-
-    UNIQUE (artist_id, member_name)
-);
-
-SET search_path TO music_store;
-
 DO $$
 DECLARE
     queen_id INT;
@@ -65,6 +45,3 @@ WHERE
     fm.member_name = 'Freddie Mercury' AND
     jd.member_name = 'John Deacon' AND
     fm.tenure_dates && jd.tenure_dates;
-
-DROP TYPE member_role;
-DROP TABLE artist_members CASCADE ;
